@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>2edda94f-81ad-4d58-8784-d558004b643d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TransCRM_ERP.DTO\TransCRM_ERP.DTO.csproj" />
+    <ProjectReference Include="..\TransCRM_ERP.Entites\TransCRM_ERP.Entites.csproj" />
+    <ProjectReference Include="..\TransCRM_ERP.Infrastructure\TransCRM_ERP.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
