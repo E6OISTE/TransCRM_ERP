@@ -56,7 +56,7 @@ namespace TransCRM_ERP.Infrastructure
             optionsBuilder.UseSqlite($"Data Source=" +
                 $"{Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "sqliteDbTrans.db")}");
 
-            optionsBuilder.LogTo(Console.WriteLine);
+            //optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
