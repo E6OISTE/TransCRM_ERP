@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TransCRM_ERP.DTO;
+using TransCRM_ERP.Entites.BaseData;
 using TransCRM_ERP.Infrastructure;
 
 namespace TransCRM_ERP.API.Controllers
@@ -35,7 +36,7 @@ namespace TransCRM_ERP.API.Controllers
         {
             var driver = await _context.Drivers.ToListAsync();
 
-            if (driver == null)
+            if (driver is null)
                 return NotFound();
 
             return Ok(_mapper.Map<List<DriverReadFullDto>>(driver));
@@ -46,7 +47,7 @@ namespace TransCRM_ERP.API.Controllers
         {
             var driver = await _context.Drivers.FirstOrDefaultAsync(dr => dr.Id == id);
 
-            if (driver == null)
+            if (driver is null)
                 return NotFound();
 
             return Ok(_mapper.Map<DriverReadFullDto>(driver));
@@ -55,8 +56,18 @@ namespace TransCRM_ERP.API.Controllers
         [HttpPost]
         public async Task<IActionResult> DriverPost([FromBody] DriverCreateDto driver)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            return Ok();
+            var newDriver = _mapper.Map<Driver>(driver);
+            await _context.Drivers.AddAsync(newDriver);
+            await _context.SaveChangesAsync();
+
+            //var resultDto = _mapper.Map<DriverCreateDto>(newDriver);
+
+            return CreatedAtAction(nameof(DriverGetById),
+                new { id = newDriver.Id },
+                _mapper.Map<DriverCreateDto>(newDriver));
         }
     }
 }
