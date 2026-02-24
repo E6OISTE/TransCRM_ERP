@@ -13,9 +13,18 @@ namespace TransCRM_ERP.API
             CreateMap<Autotransport, AutotransportReadFullDto>();
             CreateMap<Autotransport, AutotransportReadBaseDto>();
 
+            CreateMap<Driver, DriverReadFullDto>();
+            CreateMap<Driver, DriverReadBaseDto>();
+
+            CreateMap<DriverLicense, DriverLicenseReadFullDto>();
+
             /// DTO => Class
             /// For POST/PUT req
             CreateMap<AutotransportCreateDto, Autotransport>();
+
+            CreateMap<DriverCreateDto, Driver>();
+
+            CreateMap<DriverLicenseCreateDto, DriverLicense>();
         }
     }
 }

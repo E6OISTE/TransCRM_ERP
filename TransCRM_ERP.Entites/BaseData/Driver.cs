@@ -35,6 +35,7 @@ namespace TransCRM_ERP.Entites.BaseData
         /// <inheritdoc cref="DriverLicense.Id"/>
         /// </summary>
         public Guid DriverLicenseId { get; set; }
+
         /// <summary>
         /// Навигационное свойство => 
         /// <inheritdoc cref="BaseData.DriverLicense"/>
@@ -47,6 +48,7 @@ namespace TransCRM_ERP.Entites.BaseData
         /// <inheritdoc cref="Passport.Id"/>
         /// </summary>
         public Guid PassportId { get; set; }
+
         /// <summary>
         /// Навигационное свойство =>
         /// <inheritdoc cref="BaseData.Passport"/>

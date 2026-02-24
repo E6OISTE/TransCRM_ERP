@@ -16,7 +16,6 @@ namespace TransCRM_ERP.Infrastructure
         /// </summary>
         public DbSet<Waybill> Waybills { get; set; }
 
-
         /// <summary>
         /// DbSet<inheritdoc cref="Autotransport"/>
         /// </summary>

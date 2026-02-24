@@ -1,8 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json.Serialization;
 using TransCRM_ERP.Infrastructure;
-using AutoMapper;
 
 namespace TransCRM_ERP.API
 {
@@ -13,7 +11,8 @@ namespace TransCRM_ERP.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services
-            builder.Services.AddSwaggerGen();
+            //builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(config => config.CustomSchemaIds(id => id.FullName));
             builder.Services.AddControllers()
                 .AddJsonOptions(option => option.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
             builder.Services.AddEndpointsApiExplorer();
