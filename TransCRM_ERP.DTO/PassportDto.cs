@@ -45,7 +45,7 @@ namespace TransCRM_ERP.DTO
         string IssuedBy,
         string Gender,
         DateOnly Birthdate,
-        string Birthplace
-        //Driver Driver
+        string Birthplace,
+        Driver Driver
         );
 }

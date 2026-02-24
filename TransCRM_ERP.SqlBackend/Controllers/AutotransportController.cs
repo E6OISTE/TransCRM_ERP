@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Diagnostics;
-using System.Collections.Generic;
 using TransCRM_ERP.DTO;
 using TransCRM_ERP.Entites.BaseData;
 using TransCRM_ERP.Infrastructure;
-using System.Threading.Tasks;
 
 namespace TransCRM_ERP.API.Controllers
 {
@@ -52,6 +49,7 @@ namespace TransCRM_ERP.API.Controllers
                 return BadRequest(ModelState);
 
             var newAuto = _mapper.Map<Autotransport>(auto);
+
             await _context.Autotransports.AddAsync(newAuto);
             await _context.SaveChangesAsync();
 

@@ -58,6 +58,6 @@ namespace TransCRM_ERP.Entites.BaseData
         /// Навигационное свойство => 
         /// <inheritdoc cref="BaseData.Driver"/>
         /// </summary>
-        public Driver Driver { get; set; }
+        public Driver? Driver { get; set; }
     }
 }
