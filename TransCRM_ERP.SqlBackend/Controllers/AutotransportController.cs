@@ -25,7 +25,7 @@ namespace TransCRM_ERP.API.Controllers
         {
             var auto = await _context.Autotransports.ToListAsync();
 
-            if (auto == null)
+            if (auto is null)
                 return NotFound();
 
             return Ok(_mapper.Map<List<AutotransportReadBaseDto>>(auto));
@@ -36,7 +36,7 @@ namespace TransCRM_ERP.API.Controllers
         {
             var auto = await _context.Autotransports.FirstOrDefaultAsync(a => a.Id == id);
 
-            if (auto == null)
+            if (auto is null)
                 return NotFound();
 
             return Ok(_mapper.Map<AutotransportReadFullDto>(auto));

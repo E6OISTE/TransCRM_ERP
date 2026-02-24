@@ -10,6 +10,9 @@ namespace TransCRM_ERP.API
         {
             /// Class => DTOa
             /// For GET req
+            CreateMap<Required, RequiredReadBaseDto>();
+            CreateMap<Required, RequiredReadFullDto>();
+
             CreateMap<Autotransport, AutotransportReadFullDto>();
             CreateMap<Autotransport, AutotransportReadBaseDto>();
 
@@ -18,13 +21,20 @@ namespace TransCRM_ERP.API
 
             CreateMap<DriverLicense, DriverLicenseReadFullDto>();
 
+            CreateMap<Passport, PassportReadFullDto>();
+            CreateMap<Passport, PassportReadBaseDto>();
+
             /// DTO => Class
             /// For POST/PUT req
+            CreateMap<RequiredCreateDto, Required>();
+
             CreateMap<AutotransportCreateDto, Autotransport>();
 
             CreateMap<DriverCreateDto, Driver>();
 
             CreateMap<DriverLicenseCreateDto, DriverLicense>();
+
+            CreateMap<PassportCreateDto, Passport>();
         }
     }
 }
