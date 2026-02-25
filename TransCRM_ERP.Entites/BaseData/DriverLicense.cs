@@ -5,7 +5,7 @@ namespace TransCRM_ERP.Entites.BaseData
     /// <summary>
     /// Данные водительское удостоверение
     /// </summary>
-    public class DriverLicense
+    public class DriverLicense : TechnicalData.TechnicalData
     {
         /// <summary>
         /// Первичный ключ

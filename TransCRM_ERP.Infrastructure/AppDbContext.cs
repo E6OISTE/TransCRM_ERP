@@ -61,6 +61,7 @@ namespace TransCRM_ERP.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Required>();
+            modelBuilder.Entity<Required>().HasQueryFilter(d => !d.IsDeleted);
             modelBuilder.Entity<Required>()         // many => 1
                 .HasMany(w => w.Waybills)
                 .WithOne(r => r.Required)
@@ -73,6 +74,7 @@ namespace TransCRM_ERP.Infrastructure
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Autotransport>();
+            modelBuilder.Entity<Autotransport>().HasQueryFilter(d => !d.IsDeleted);
             modelBuilder.Entity<Autotransport>()    // 1 => 1
                 .HasOne(a => a.Required)
                 .WithOne(r => r.Autotransport)
@@ -80,6 +82,7 @@ namespace TransCRM_ERP.Infrastructure
                 .IsRequired(false);
 
             modelBuilder.Entity<Driver>();
+            modelBuilder.Entity<Driver>().HasQueryFilter(d => !d.IsDeleted);
             modelBuilder.Entity<Driver>()           // 1 => 1
                 .HasOne(d => d.Required)
                 .WithOne(r => r.Driver)
@@ -89,6 +92,7 @@ namespace TransCRM_ERP.Infrastructure
             modelBuilder.Entity<Waybill>();
 
             modelBuilder.Entity<DriverLicense>();
+            modelBuilder.Entity<DriverLicense>().HasQueryFilter(d => !d.IsDeleted);
             modelBuilder.Entity<DriverLicense>()    // 1 => 1
                 .HasOne(dl => dl.Driver)
                 .WithOne(d => d.DriverLicense)
@@ -97,6 +101,7 @@ namespace TransCRM_ERP.Infrastructure
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Passport>();
+            modelBuilder.Entity<Passport>().HasQueryFilter(d => !d.IsDeleted);
             modelBuilder.Entity<Passport>()         // 1 => 1
                 .HasOne(p => p.Driver)
                 .WithOne(d => d.Passport)
@@ -105,6 +110,7 @@ namespace TransCRM_ERP.Infrastructure
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<DrivingRoute>();
+            modelBuilder.Entity<DrivingRoute>().HasQueryFilter(d => !d.IsDeleted);
             modelBuilder.Entity<DrivingRoute>()     // 1 => M
                 .HasOne(al => al.AddressLoading)
                 .WithMany(dr => dr.AddressLoading)

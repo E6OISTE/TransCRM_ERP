@@ -33,7 +33,6 @@ namespace TransCRM_ERP.API.Controllers
             while (reader.Read())
                 tables.Add(reader.GetString(0));
             return Ok(tables);
-
         }
     }
 }

@@ -7,7 +7,7 @@ namespace TransCRM_ERP.Entites.SecondaryData
     /// <summary>
     /// Адрес
     /// </summary>
-    public class AddressPoint : InfoDateTimeCreate
+    public class AddressPoint : TechnicalData.TechnicalData
     {
         /// <summary>Первичный ключ</summary>
         [Key]

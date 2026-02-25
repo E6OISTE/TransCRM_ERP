@@ -7,7 +7,7 @@ namespace TransCRM_ERP.Entites.BaseData
     ///<summary>
     ///Маршрут движения
     ///</summary>
-    public class DrivingRoute : InfoDateTimeCreate
+    public class DrivingRoute : TechnicalData.TechnicalData
     {
         /// <summary>
         /// Первичный ключ

@@ -6,7 +6,7 @@ namespace TransCRM_ERP.Entites.BaseData
     /// <summary>
     /// Данные водителя
     /// </summary>
-    public class Driver : InfoDateTimeCreate
+    public class Driver : TechnicalData.TechnicalData
     {
         /// <summary>
         /// Первичный ключ

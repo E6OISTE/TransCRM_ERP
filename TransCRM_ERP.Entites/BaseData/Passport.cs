@@ -6,7 +6,7 @@ namespace TransCRM_ERP.Entites.BaseData
     /// <summary>
     /// Паспорт
     /// </summary>
-    public class Passport : InfoDateTimeCreate
+    public class Passport : TechnicalData.TechnicalData
     {
         /// <summary>
         /// Первичный ключ

@@ -6,7 +6,7 @@ namespace TransCRM_ERP.Entites.BaseData
     /// <summary>
     /// Транспортная накладная
     /// </summary>
-    public class Waybill : InfoDateTimeCreate
+    public class Waybill : TechnicalData.TechnicalData
     {
         /// <summary>
         /// Первичный ключ

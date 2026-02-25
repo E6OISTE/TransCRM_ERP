@@ -25,10 +25,10 @@ namespace TransCRM_ERP.API.Controllers
         {
             var req = await _context.Requireds.ToListAsync();
 
-            if (req is null)
+            if (req == null)
                 return NotFound();
 
-            return Ok(_mapper.Map<RequiredReadFullDto>(req));
+            return Ok(_mapper.Map<List<RequiredReadFullDto>>(req));
         }
 
         [HttpGet("{id}")]
@@ -39,7 +39,7 @@ namespace TransCRM_ERP.API.Controllers
             if (req is null)
                 return NotFound();
 
-            return Ok(_mapper.Map<List<RequiredReadFullDto>>(req));
+            return Ok(_mapper.Map<RequiredReadFullDto>(req));
         }
 
         [HttpPost]

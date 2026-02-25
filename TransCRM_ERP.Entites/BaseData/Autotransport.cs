@@ -7,7 +7,7 @@ namespace TransCRM_ERP.Entites.BaseData
     /// <summary>
     /// Автотранспорт
     /// </summary>
-    public class Autotransport : InfoDateTimeCreate
+    public class Autotransport : TechnicalData.TechnicalData
     {
         /// <summary>
         /// Первичный ключ

@@ -7,7 +7,7 @@ namespace TransCRM_ERP.Entites.BaseData
     /// <summary>
     /// Заявка
     /// </summary>
-    public class Required : InfoDateTimeCreate
+    public class Required : TechnicalData.TechnicalData
     {
         ///<summary>
         ///Первичный ключ
