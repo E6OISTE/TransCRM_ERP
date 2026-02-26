@@ -1,6 +1,5 @@
 ﻿using TransCRM_ERP.Entites.Enums;
 using System.ComponentModel.DataAnnotations;
-using TransCRM_ERP.Entites.TechnicalData;
 
 namespace TransCRM_ERP.Entites.BaseData
 {

@@ -50,13 +50,13 @@ namespace TransCRM_ERP.DTO
         string CarBrand,
         string CarModel,
         float Lifting,
-        float? CarVolume,
-        float? SpaceDimensionsLength,
-        float? SpaceDimensionsWidth,
-        float? SpaceDimensionsHeight,
-        LoadingUnloadingTypeAddit[]? LoadingUnloadingTypeAddit,
-        RightUseVehicle? RightUseVehicle,
-        string? CarRegistrationCertificateNumb,
-        DateOnly? CarRegistrationCertificateDate
+        float? CarVolume = null,
+        float? SpaceDimensionsLength = null,
+        float? SpaceDimensionsWidth = null,
+        float? SpaceDimensionsHeight = null,
+        LoadingUnloadingTypeAddit[]? LoadingUnloadingTypeAddit = null,
+        RightUseVehicle? RightUseVehicle = null,
+        string? CarRegistrationCertificateNumb = null,
+        DateOnly? CarRegistrationCertificateDate = null
         );
 }

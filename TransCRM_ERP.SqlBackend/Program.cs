@@ -45,6 +45,7 @@ namespace TransCRM_ERP.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
             if (app.Environment.IsProduction())
             {
                 app.UseSwagger();

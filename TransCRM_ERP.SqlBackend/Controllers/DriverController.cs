@@ -36,7 +36,7 @@ namespace TransCRM_ERP.API.Controllers
         {
             var driver = await _context.Drivers.ToListAsync();
 
-            if (driver is null)
+            if (driver == null)
                 return NotFound();
 
             return Ok(_mapper.Map<List<DriverReadFullDto>>(driver));

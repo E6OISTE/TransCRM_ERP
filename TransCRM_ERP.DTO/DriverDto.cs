@@ -27,14 +27,14 @@ namespace TransCRM_ERP.DTO
         Passport Passport,
         long PhoneNumber,
         string? Citizenship,
-        Required? Required
+        Required? Required,
+        bool IsDeleted
         );
 
     /// <summary>
     /// DTO => Create => <inheritdoc cref="Driver"/>
     /// </summary>
     public record DriverCreateDto(
-        Guid Id,
         string Surname,
         string Name,
         string? Lastname,
